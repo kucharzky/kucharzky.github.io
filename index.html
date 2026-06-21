@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kucharzky - Moje Projekty</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #7f8c8d;
+            margin-bottom: 40px;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 800px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 260px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 5px solid #3498db;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+        .card p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Witaj na mojej stronie!</h1>
+    <p>Wybierz jeden z poniższych projektów, aby go przetestować:</p>
+
+    <div class="container">
+        <a href="/quiz/" class="card">
+            <h3>Projekt: Quiz</h3>
+            <p>Kliknij tutaj, aby przejść do aplikacji z quizem i sprawdzić swoją wiedzę.</p>
+        </a>
+
+        <a href="/dbscan-project/" class="card" style="border-top-color: #2ecc71;">
+            <h3>DBSCAN Project</h3>
+            <p>Przejdź do projektu analizującego algorytm gęstościowego grupowania danych.</p>
+        </a>
+    </div>
+
+</body>
+</html>
