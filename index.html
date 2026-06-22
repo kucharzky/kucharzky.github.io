@@ -1,76 +1,283 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kucharzky - Moje Projekty</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #7f8c8d;
-            margin-bottom: 40px;
-        }
-        .container {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 800px;
-        }
-        .card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 20px;
-            width: 260px;
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s, box-shadow 0.2s;
-            border-top: 5px solid #3498db;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-        }
-        .card h3 {
-            margin-top: 0;
-            color: #2980b9;
-        }
-        .card p {
-            font-size: 14px;
-            margin-bottom: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maciej Kucharski — FPGA Verification Engineer portfolio">
+  <title>Maciej Kucharski | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <h1>Witaj na mojej stronie!</h1>
-    <p>Wybierz jeden z poniższych projektów, aby go przetestować:</p>
+  <div class="page">
+    <main class="feed">
 
-    <div class="container">
-        <a href="/quiz/" class="card">
-            <h3>Projekt: Quiz</h3>
-            <p>Kliknij tutaj, aby przejść do aplikacji z quizem i sprawdzić swoją wiedzę.</p>
-        </a>
+      <!-- Hero -->
+      <section id="hero" class="card hero" aria-label="Profile">
+        <div class="hero__banner" role="presentation"></div>
+        <div class="hero__profile">
+          <img class="hero__avatar" src="https://media.licdn.com/dms/image/v2/D4E03AQHlmxiXfCWBgw/profile-displayphoto-crop_800_800/B4EZko18eSIoAI-/0/1757326855117?e=1783555200&amp;v=beta&amp;t=7kQygCfOVgzXjbflJtuklZ9DPn7S7QiGLIDMMk1wPWs" alt="Maciej Kucharski profile photo">
+          <div class="hero__info">
+            <h1 class="hero__name">Maciej Kucharski</h1>
+            <p class="hero__headline">FPGA Verification Engineer — Working Student</p>
+            <p class="hero__subtitle">FPGA Verification Engineer @ Nokia | C++, Python, SystemVerilog | MSc Telecommunications and Computer Science Student | BEng in Electronics and Telecommunications</p>
+            <p class="hero__location">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a5 5 0 0 0-5 5c0 3.52 5 9 5 9s5-5.48 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+              Kraków, Poland
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="https://github.com/kucharzky" target="_blank" rel="noopener noreferrer">View GitHub</a>
+              <a class="btn btn--linkedin" href="https://www.linkedin.com/in/kucharzky/" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
+              <a class="btn btn--secondary" href="#projects">Featured Projects</a>
+              <a class="btn btn--secondary" href="#experience">Experience</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <a href="/dbscan-project/" class="card" style="border-top-color: #2ecc71;">
-            <h3>DBSCAN Project</h3>
-            <p>Przejdź do projektu analizującego algorytm gęstościowego grupowania danych.</p>
-        </a>
-    </div>
+      <!-- Experience -->
+      <section id="experience" class="card">
+        <div class="card__body">
+          <h2 class="section-title">Experience</h2>
+          <ol class="timeline">
+            <li class="timeline__item timeline__item--current">
+              <p class="timeline__company">Nokia</p>
+              <p class="timeline__role">FPGA Working Student</p>
+              <p class="timeline__meta">Kraków, Poland · Oct 2025 – Present</p>
+            </li>
+            <li class="timeline__item">
+              <p class="timeline__company">Nokia</p>
+              <p class="timeline__role">FPGA Summer Trainee</p>
+              <p class="timeline__meta">Kraków, Poland · Jul 2025 – Sep 2025</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="card">
+        <div class="card__body">
+          <h2 class="section-title">Education</h2>
+          <ul class="edu-list">
+            <li class="edu-list__item">
+              <p class="edu-list__school">AGH University of Krakow</p>
+              <p class="edu-list__degree">Bachelor of Engineering</p>
+              <p class="edu-list__dates">Oct 2022 – Feb 2026</p>
+            </li>
+            <li class="edu-list__item">
+              <p class="edu-list__school">AGH University of Krakow</p>
+              <p class="edu-list__degree">Master of Science <span class="edu-list__badge">Expected</span></p>
+              <p class="edu-list__dates">Mar 2026 – Present</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="card">
+        <div class="card__body">
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <div class="skills">
+            <span class="skill-badge">SystemVerilog</span>
+            <span class="skill-badge">C++</span>
+            <span class="skill-badge">C</span>
+            <span class="skill-badge">Embedded C</span>
+            <span class="skill-badge">Embedded</span>
+            <span class="skill-badge">FPGA</span>
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">Machine Learning</span>
+            <span class="skill-badge">AI/ML</span>
+            <span class="skill-badge">CLI</span>
+            <span class="skill-badge">Linux</span>
+            <span class="skill-badge">Docker</span>
+            <span class="skill-badge">Containerization</span>
+            <span class="skill-badge">Agile</span>
+            <span class="skill-badge">Jira</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects -->
+      <section id="projects" class="card">
+        <div class="card__body">
+          <h2 class="section-title">Projects</h2>
+
+          <h3 class="projects-group__title">Featured</h3>
+          <div class="projects-grid">
+
+            <!-- Live demos — root-relative links must stay unchanged -->
+            <a href="/quiz/" class="project-card project-card--demo">
+              <div class="project-card__header">
+                <svg class="project-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+                <span class="project-card__title">Quiz</span>
+                <span class="project-card__type">Live demo</span>
+              </div>
+              <p class="project-card__desc">Interactive quiz app with 105 questions to test your knowledge.</p>
+              <div class="project-card__tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">HTML</span>
+              </div>
+            </a>
+
+            <a href="/dbscan-project/" class="project-card project-card--demo">
+              <div class="project-card__header">
+                <svg class="project-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+                <span class="project-card__title">DBSCAN Project</span>
+                <span class="project-card__type">Live demo</span>
+              </div>
+              <p class="project-card__desc">Density-based clustering analysis project exploring the DBSCAN algorithm.</p>
+              <div class="project-card__tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Machine Learning</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/kucharzky/matlab" class="project-card" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__header">
+                <svg class="project-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+                <span class="project-card__title">matlab</span>
+                <span class="project-card__type">GitHub</span>
+              </div>
+              <p class="project-card__desc">Visualization of analog system transfer functions H(s) together with their frequency response characteristics.</p>
+              <div class="project-card__tags">
+                <span class="project-tag project-tag--dark">MATLAB</span>
+                <span class="project-tag project-tag--dark">Signal Processing</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/kucharzky/music-instrument" class="project-card" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__header">
+                <svg class="project-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+                <span class="project-card__title">music-instrument</span>
+                <span class="project-card__type">GitHub</span>
+              </div>
+              <p class="project-card__desc">Music synthesizer driven by an accelerometer on an FRDM-KL05Z microcontroller.</p>
+              <div class="project-card__tags">
+                <span class="project-tag project-tag--dark">C</span>
+                <span class="project-tag project-tag--dark">Embedded</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/kucharzky/wifi-intercom" class="project-card" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__header">
+                <svg class="project-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+                <span class="project-card__title">wifi-intercom</span>
+                <span class="project-card__type">GitHub</span>
+              </div>
+              <p class="project-card__desc">Embedded intercom system on ESP32 microcontrollers with an HTML receiver.</p>
+              <div class="project-card__tags">
+                <span class="project-tag project-tag--dark">C</span>
+                <span class="project-tag project-tag--dark">ESP32</span>
+                <span class="project-tag project-tag--dark">Embedded</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/kucharzky/car-driving-sims" class="project-card" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__header">
+                <svg class="project-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+                <span class="project-card__title">car-driving-sims</span>
+                <span class="project-card__type">GitHub</span>
+              </div>
+              <p class="project-card__desc">Python simulation project for car driving scenarios and analysis.</p>
+              <div class="project-card__tags">
+                <span class="project-tag project-tag--dark">Python</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/kucharzky/mniAM-playerbot" class="project-card" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__header">
+                <svg class="project-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+                <span class="project-card__title">mniAM-playerbot</span>
+                <span class="project-card__type">GitHub</span>
+              </div>
+              <p class="project-card__desc">Low-level C project — automated player bot implementation.</p>
+              <div class="project-card__tags">
+                <span class="project-tag project-tag--dark">C</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/kucharzky/simple-metronome" class="project-card" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__header">
+                <svg class="project-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+                <span class="project-card__title">simple-metronome</span>
+                <span class="project-card__type">GitHub</span>
+              </div>
+              <p class="project-card__desc">Microprocessor Technology class project — a simple metronome on embedded hardware.</p>
+              <div class="project-card__tags">
+                <span class="project-tag project-tag--dark">Embedded C</span>
+                <span class="project-tag project-tag--dark">Embedded</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/kucharzky/Astro-Cruiser" class="project-card project-card--game" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__header">
+                <svg class="project-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+                <span class="project-card__title">Astro-Cruiser</span>
+                <span class="project-card__type">For fun</span>
+              </div>
+              <p class="project-card__desc">Retro arcade shooter inspired by Space Invaders and Galaxian — built for fun in C++.</p>
+              <div class="project-card__tags">
+                <span class="project-tag project-tag--dark">C++</span>
+                <span class="project-tag project-tag--dark">Game</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/kucharzky/hangman" class="project-card project-card--game" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__header">
+                <svg class="project-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+                <span class="project-card__title">hangman</span>
+                <span class="project-card__type">For fun</span>
+              </div>
+              <p class="project-card__desc">Multiplayer Hangman over TCP sockets with UDP multicast server discovery and pthreads.</p>
+              <div class="project-card__tags">
+                <span class="project-tag project-tag--dark">C</span>
+                <span class="project-tag project-tag--dark">Networking</span>
+              </div>
+            </a>
+
+          </div>
+
+          <h3 class="projects-group__title">Contributor</h3>
+          <p class="projects-group__desc">Open-source projects where I contributed as a collaborator.</p>
+          <div class="projects-grid">
+
+            <a href="https://github.com/AH-repo/Affinity_propagation_Python2025" class="project-card project-card--contributor" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__header">
+                <svg class="project-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+                <span class="project-card__title">Affinity_propagation_Python2025</span>
+                <span class="project-card__type">Contributor</span>
+              </div>
+              <p class="project-card__desc">Python implementation of the Affinity Propagation clustering algorithm — contributed testing and validation.</p>
+              <div class="project-card__tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Machine Learning</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/ardysk/ONNXConversionStudy" class="project-card project-card--contributor" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__header">
+                <svg class="project-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+                <span class="project-card__title">ONNXConversionStudy</span>
+                <span class="project-card__type">Contributor</span>
+              </div>
+              <p class="project-card__desc">Study on converting machine learning models to the ONNX format, with experiments in Jupyter and Google Colab.</p>
+              <div class="project-card__tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">ONNX</span>
+                <span class="project-tag">Jupyter</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Maciej Kucharski · <a href="https://github.com/kucharzky" target="_blank" rel="noopener noreferrer">github.com/kucharzky</a></p>
+    </footer>
+  </div>
 
 </body>
 </html>
