@@ -139,6 +139,23 @@ img {
   margin-top: 12px;
 }
 
+.hero__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.hero__identity {
+  min-width: 0;
+  flex: 1;
+}
+
+.hero__contact {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
 .hero__name {
   font-size: 1.5rem;
   font-weight: 600;
@@ -228,6 +245,104 @@ img {
   background: var(--gh-border);
   border-color: var(--gh-text-muted);
   color: var(--gh-text);
+}
+
+/* Hero CTA buttons */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-cta:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn-cta:active {
+  transform: translateY(0);
+}
+
+.btn-cta--primary {
+  background: linear-gradient(180deg, #388bfd 0%, #1f6feb 100%);
+  color: #fff;
+  border-color: rgba(56, 139, 253, 0.5);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 2px 8px rgba(56, 139, 253, 0.35);
+}
+
+.btn-cta--primary:hover {
+  background: linear-gradient(180deg, #58a6ff 0%, #388bfd 100%);
+  color: #fff;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 4px 16px rgba(56, 139, 253, 0.45);
+}
+
+.btn-cta--outline {
+  background: transparent;
+  color: var(--gh-text);
+  border-color: var(--gh-border);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cta--outline:hover {
+  background: var(--gh-canvas-subtle);
+  border-color: var(--gh-accent-muted);
+  color: var(--gh-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   Contact page
+   ========================================================================== */
+
+.contact__back {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gh-text-muted);
+  margin-bottom: 20px;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.contact__back:hover {
+  color: var(--gh-accent);
+  text-decoration: none;
+}
+
+.contact__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.contact__desc {
+  font-size: 0.9375rem;
+  color: var(--gh-text-muted);
+  max-width: 480px;
+  margin-bottom: 24px;
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 /* ==========================================================================
@@ -558,7 +673,20 @@ img {
     height: 112px;
   }
 
+  .hero__header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__contact {
+    margin-top: 12px;
+  }
+
   .hero__actions {
+    justify-content: center;
+  }
+
+  .contact__actions {
     justify-content: center;
   }
 
